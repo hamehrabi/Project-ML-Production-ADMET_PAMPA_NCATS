@@ -1,0 +1,1 @@
+from aws_model_registry.model_registry import ModelRegistryConnection

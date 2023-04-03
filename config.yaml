@@ -1,0 +1,48 @@
+feature_store:
+  bucket_name: featurestore-PAMPA_NCATS
+  file_name: pampa_ncats.tab
+
+model_registry:
+  bucket_name: modelregistry-PAMPA_NCATS
+  test_folder: testing
+  prod_folder: production
+  package_name : artifacts
+  zip_files:
+    - model.pkl
+
+preprocessed_dataset_path:
+  - ./preprocessed_dataset
+
+preprocessed_data:
+  X_train: X_train.npy
+  X_test: X_test.npy
+  y_train: y_train.npy
+  y_test: y_test.npy
+
+email_params:
+  sender_email: ha.mehrabi1992@gmail.com
+  receiver_email: ha.mehrabi1992@gmail.com
+  application_key:
+  train_message : "Model Trained and successfully Registered"
+  test_message : "Model Test and successfully shifted into Production"
+  endpoint_message: "Endpoint updated"
+
+
+ml_params:
+  test_size: 0.2
+  random_state: 42
+  feature: "Drug"
+  label: "Y"
+  best_model_params: {'subsample': 0.8, 
+                'reg_lambda': 5, 
+                'reg_alpha': 0, 
+                'n_estimators': 200, 
+                'min_child_weight': 5, 
+                'max_depth': 7, 
+                'learning_rate': 0.01, 
+                'colsample_bytree': 0.7}
+
+
+
+
+

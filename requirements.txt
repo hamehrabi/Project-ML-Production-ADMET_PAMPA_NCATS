@@ -17,5 +17,6 @@ mordred[full]
 scikit-learn
 numpy
 pandas
+xgboost
 
 -e .
